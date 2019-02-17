@@ -24,7 +24,19 @@ var settings = {
 module.exports = settings;
 ```
 
-```
+```js
+app.use(express.static('public'));
+app.use(express.static('node-modules'));
+
+app.post('/unicorn/', function (req, res) {
+  var input = req.body.foo; input = "bar"
+  var result = "Hello"; 
+  res.send(result);
+});
+
+app.listen(3000, function () {
+  console.log("Example app listening on port 3000!");
+});
 ```
 
 
